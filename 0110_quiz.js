@@ -7,22 +7,22 @@
 
 let students = [
   {
-    name: "John",
+    name: 'John',
     score1: 47,
     score2: 46,
   },
   {
-    name: "Bob",
+    name: 'Bob',
     score1: 23,
     score2: 24,
   },
   {
-    name: "Nick",
+    name: 'Nick',
     score1: 40,
     score2: 35,
   },
   {
-    name: "Alex",
+    name: 'Alex',
     score1: 44,
     score2: 45,
   },
@@ -33,28 +33,24 @@ let students = [
 
 let degreesArr = [
   {
-    degree: "A",
+    degree: 'A',
     pass: 91,
   },
   {
-    degree: "B",
+    degree: 'B',
     pass: 81,
   },
   {
-    degree: "C",
+    degree: 'C',
     pass: 71,
   },
   {
-    degree: "D",
+    degree: 'D',
     pass: 61,
   },
   {
-    degree: "E",
+    degree: 'E',
     pass: 51,
-  },
-  {
-    degree: "none",
-    pass: 0,
   },
 ];
 
@@ -80,5 +76,7 @@ function checkDegree(students) {
 // 5. Display the final result in console.
 checkDegree(students);
 for (let student of students) {
-  console.log(student.name + "'s degree is " + student.degree);
+  if (student.degree === undefined)
+    console.log(student.name + "'s degree is none");
+  else console.log(student.name + "'s degree is " + student.degree);
 }
